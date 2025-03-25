@@ -3,32 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gemini AI Chatbot</title>
+  <title>AI Chatbot By Praveen Hallur</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+  <!-- Chat Header -->
+  <header>
+    <h1 class="chat-title"> AI Chatbot For Study</h1>
+  </header>
+
   <!-- Chat Container -->
   <div class="chat-container">
-    <!-- Chatbot Heading -->
-    <div class="chat-header">
-      <h1 class="chatbot-heading">Chatbot By Praveen Hallur</h1>
-    </div>
-
-    <!-- Chat Box -->
     <div id="chat-box"></div>
-
-    <!-- Input Area -->
+    <div class="typing-indicator" id="typing-indicator">Gemini is typing...</div>
     <div class="input-area">
       <input
         type="text"
         id="user-input"
-        placeholder="Ask Any Thing..."
+        placeholder="Message Gemini..."
         autocomplete="off"
       />
-      <button onclick="sendMessage()">Send</button>
+      <button onclick="sendMessage()">➤</button>
     </div>
   </div>
+
+  <footer>
+    Developed by 
+    <a href="https://praveenhallur123.github.io/PraveenHallur123-Praveen---personal-portfolio/" target="_blank" class="developer">
+      Praveen Hallur
+    </a>
+  </footer>
 
   <script src="script.js"></script>
 </body>
