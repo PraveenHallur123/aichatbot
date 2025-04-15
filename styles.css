@@ -19,7 +19,7 @@ body {
 /* Header */
 header {
   text-align: center;
-  padding: 24px 0;
+  padding: 20px 0;
   width: 100%;
   max-width: 900px;
   background: transparent;
@@ -50,7 +50,7 @@ header {
 /* Chat Box */
 #chat-box {
   flex: 1;
-  padding: 20px;
+  padding: 16px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -62,9 +62,9 @@ header {
 /* Messages */
 .user-message,
 .bot-message {
-  padding: 14px 20px;
+  padding: 14px 18px;
   border-radius: 16px;
-  max-width: 70%;
+  max-width: 80%; /* Changed from 70% for better fit */
   font-size: 16px;
   line-height: 1.6;
   word-break: break-word;
@@ -103,14 +103,17 @@ header {
 .input-area {
   display: flex;
   align-items: center;
-  padding: 14px 16px;
+  padding: 12px 10px;
   background-color: #2b2b3c;
   border-top: 1px solid #3f3f55;
+  gap: 10px;
+  flex-wrap: wrap; /* Allow input and button to wrap on small screens */
 }
 
 #user-input {
   flex: 1;
-  padding: 12px 18px;
+  min-width: 0;
+  padding: 12px 16px;
   background-color: #3b3b4f;
   color: #ffffff;
   border: none;
@@ -137,9 +140,9 @@ button {
   border-radius: 24px;
   font-size: 16px;
   font-weight: 600;
-  margin-left: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 button:hover {
@@ -161,10 +164,10 @@ footer {
   font-weight: bold;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .chat-container {
-    width: 95%;
+    width: 100%;
     height: 70vh;
   }
 
@@ -183,15 +186,43 @@ footer {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
   .chat-container {
-    height: 72vh;
+    width: 100%;
+    height: 68vh;
+    border-radius: 10px;
   }
 
   .chat-title {
     font-size: 20px;
   }
 
-  button {
+  #chat-box {
+    padding: 12px;
+  }
+
+  .user-message, .bot-message {
+    font-size: 14px;
     padding: 10px 14px;
+    max-width: 90%;
+  }
+
+  .input-area {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #user-input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
   }
 }
